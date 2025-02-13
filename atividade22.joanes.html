@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha Secreta</title>
+    <script>
+        function verificarSenha() {
+            var senha = document.getElementById("senha").value;
+            if (senha.length < 6) {
+                alert("A senha é muito fraca!");
+            } else {
+                alert("Senha forte!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 22 - Senha Secreta</h1>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <button onclick="verificarSenha()">Verificar Senha</button>
+</body>
+</html>

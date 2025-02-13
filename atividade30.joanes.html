@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <script>
+        var cartas = ["🍎", "🍎", "🍌", "🍌", "🍒", "🍒"];
+        var tentativas = [];
+        var acertos = 0;
+
+        function embaralhar() {
+            for (var i = cartas.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                [cartas[i], cartas[j]] = [cartas[j], cartas[i]];
+            }
+        }
+
+        function virarCarta(index) {
+            var carta = document.getElementsByClassName("carta")[index];
+            carta.innerHTML = cartas[index];
+            tentativas.push(index);
+
+            if (tentativas.length === 2) {
+                setTimeout(function() {
+                    if (cartas[tentativas[0]] !== cartas[tentativas[1]]) {
+                        document.getElementsByClassName("carta")[tentativas[0]].innerHTML = "❓";
+                        document.getElementsByClassName("carta")[tentativas[1]].innerHTML = "❓";
+                    } else {
+                        acertos++;
+                        if (acertos === cartas.length / 2) {
+                            alert("Você venceu!");
+                        }
+                    }
+                    tentativas = [];
+                }, 1000);
+            }
+        }
+
+        embaralhar();
+    </script>
+</head>
+<body>
+    <h1>Atividade 30 - Jogo da Memória</h1>
+    <div>
+        <div class="carta" onclick="virarCarta(0)">❓</div>
+        <div class="carta" onclick="virarCarta(1)">❓</div>
+        <div class="carta" onclick="virarCarta(2)">❓</div>
+        <div class="carta" onclick="virarCarta(3)">❓</div>
+        <div class="carta" onclick="virarCarta(4)">❓</div>
+        <div class="carta" onclick="virarCarta(5)">❓</div>
+    </div>
+</body>
+</html>

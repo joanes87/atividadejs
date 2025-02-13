@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Emoji</title>
+    <script>
+        function mostrarEmoji() {
+            var emojis = ["😊", "😂", "😍", "😎", "😜"];
+            var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            var p = document.createElement("p");
+            p.innerText = emoji;
+            document.body.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 42 - Painel de Emoji</h1>
+    <button onclick="mostrarEmoji()">Mostrar Emoji</button>
+</body>
+</html>

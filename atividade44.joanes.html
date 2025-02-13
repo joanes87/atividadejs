@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Clique Rápido</title>
+    <script>
+        var contagem = 0;
+        var tempoLimite = 10;
+        
+        function contarCliques() {
+            contagem++;
+            document.getElementById("cliques").innerText = "Cliques: " + contagem;
+        }
+
+        setTimeout(function() {
+            alert("Você clicou " + contagem + " vezes em 10 segundos.");
+        }, tempoLimite * 1000);
+    </script>
+</head>
+<body>
+    <h1>Atividade 44 - Jogo do Clique Rápido</h1>
+    <button onclick="contarCliques()">Clique aqui!</button>
+    <p id="cliques">Cliques: 0</p>
+</body>
+</html>

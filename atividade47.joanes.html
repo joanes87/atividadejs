@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Dinâmico</title>
+    <script>
+        function atualizarTexto() {
+            var texto = document.getElementById("campoTexto").value;
+            document.getElementById("textoDinamico").innerText = texto;
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 47 - Texto Dinâmico</h1>
+    <input type="text" id="campoTexto" oninput="atualizarTexto()">
+    <p id="textoDinamico">Digite algo acima!</p>
+</body>
+</html>

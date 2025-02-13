@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iluminação Gradual</title>
+    <script>
+        var brilho = 0.2;
+        function iluminar() {
+            brilho += 0.1;
+            if (brilho > 1) brilho = 1;
+            document.body.style.backgroundColor = "rgba(255, 255, 255, " + brilho + ")";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 17 - Iluminação Gradual</h1>
+    <button onclick="iluminar()">Iluminar</button>
+</body>
+</html>

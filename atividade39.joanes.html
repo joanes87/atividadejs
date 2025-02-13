@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <script>
+        function iniciarQuiz() {
+            var resposta1 = prompt("Qual a capital do Brasil?");
+            var resposta2 = prompt("Quem escreveu 'Dom Casmurro'?");
+            var resposta3 = prompt("Qual é a cor do céu em um dia claro?");
+            
+            var acertos = 0;
+            if (resposta1.toLowerCase() === "brasília") acertos++;
+            if (resposta2.toLowerCase() === "machado de assis") acertos++;
+            if (resposta3.toLowerCase() === "azul") acertos++;
+
+            alert("Você acertou " + acertos + " de 3 perguntas.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 39 - Quiz Interativo</h1>
+    <button onclick="iniciarQuiz()">Iniciar Quiz</button>
+</body>
+</html>

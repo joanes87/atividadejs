@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Visual</title>
+    <script>
+        function validarCampo() {
+            var campo = document.getElementById("campo");
+            if (campo.value == "") {
+                campo.style.backgroundColor = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 24 - Feedback Visual</h1>
+    <input type="text" id="campo" onblur="validarCampo()">
+    <button onclick="validarCampo()">Enviar</button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Palíndromos</title>
+    <script>
+        function verificarPalindromo() {
+            var palavra = document.getElementById("palavra").value.toLowerCase().replace(/\s/g, "");
+            var invertida = palavra.split("").reverse().join("");
+            if (palavra === invertida) {
+                alert("É um palíndromo!");
+            } else {
+                alert("Não é um palíndromo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 32 - Verificador de Palíndromos</h1>
+    <input type="text" id="palavra" placeholder="Digite uma palavra ou frase"><br><br>
+    <button onclick="verificarPalindromo()">Verificar</button>
+</body>
+</html>

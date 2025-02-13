@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nomes</title>
+    <script>
+        function gerarNome() {
+            var nomes = ["Ana", "Carlos", "Pedro", "Maria", "Julia", "Fernando"];
+            var sobrenomes = ["Silva", "Oliveira", "Souza", "Costa", "Santos", "Pereira"];
+            var nome = nomes[Math.floor(Math.random() * nomes.length)];
+            var sobrenome = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+            alert("Nome gerado: " + nome + " " + sobrenome);
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 37 - Gerador de Nomes</h1>
+    <button onclick="gerarNome()">Gerar Nome</button>
+</body>
+</html>

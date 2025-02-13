@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Interativa</title>
+    <script>
+        function gerarTabuada() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var resultado = "";
+            
+            for (var i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}<br>`;
+            }
+            document.getElementById("tabuada").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 33 - Tabuada Interativa</h1>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <div id="tabuada"></div>
+</body>
+</html>

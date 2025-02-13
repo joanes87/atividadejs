@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regressivo</title>
+    <script>
+        function iniciarContagem() {
+            var tempo = parseInt(document.getElementById("tempo").value);
+            var intervalo = setInterval(function() {
+                if (tempo > 0) {
+                    document.getElementById("contador").innerHTML = tempo;
+                    tempo--;
+                } else {
+                    clearInterval(intervalo);
+                    alert("Tempo esgotado!");
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 34 - Contador Regressivo</h1>
+    <label for="tempo">Tempo (segundos):</label>
+    <input type="number" id="tempo">
+    <button onclick="iniciarContagem()">Iniciar Contagem</button>
+    <div id="contador"></div>
+</body>
+</html>

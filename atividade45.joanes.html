@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Simples</title>
+    <script>
+        function mostrarCalendario() {
+            var data = new Date();
+            var mes = data.getMonth();
+            var ano = data.getFullYear();
+
+            var diasDaSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+            var diasNoMes = new Date(ano, mes + 1, 0).getDate();
+            var primeiroDia = new Date(ano, mes, 1).getDay();
+            
+            var calendario = "<table border='1'><tr>";
+            for (var i = 0; i < diasDaSemana.length; i++) {
+                calendario += "<th>" + diasDaSemana[i] + "</th>";
+            }
+            calendario += "</tr><tr>";
+
+            for (var i = 0; i < primeiroDia; i++) {
+                calendario += "<td></td>";
+            }
+
+            for (var dia = 1; dia <= diasNoMes; dia++) {
+                if ((dia + primeiroDia - 1) % 7 == 0 && dia != 1) {
+                    calendario += "</tr><tr>";
+                }
+                calendario += "<td>" + dia + "</td>";
+            }
+
+            calendario += "</tr></table>";
+            document.getElementById("calendario").innerHTML = calendario;
+        }
+    </script>
+</head>
+<body onload="mostrarCalendario()">
+    <h1>Atividade 45 - Calendário Simples</h1>
+    <div id="calendario"></div>
+</body>
+</html>

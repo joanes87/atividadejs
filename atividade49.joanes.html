@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras de Progresso</title>
+    <script>
+        function atualizarBarra() {
+            var barra = document.getElementById("barraProgresso");
+            var valorAtual = barra.value;
+            if (valorAtual < 100) {
+                barra.value += 10;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 49 - Barras de Progresso</h1>
+    <progress id="barraProgresso" value="0" max="100"></progress>
+    <button onclick="atualizarBarra()">Atualizar Barra</button>
+</body>
+</html>

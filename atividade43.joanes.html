@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Semáforo</title>
+    <style>
+        #semáforo {
+            width: 100px;
+            height: 300px;
+            background-color: black;
+            border-radius: 10px;
+            position: relative;
+        }
+        .luz {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px auto;
+            background-color: #777;
+        }
+        .verde {
+            background-color: green;
+        }
+        .amarelo {
+            background-color: yellow;
+        }
+        .vermelho {
+            background-color: red;
+        }
+    </style>
+    <script>
+        var cores = ["vermelho", "amarelo", "verde"];
+        var contador = 0;
+        
+        function mudarCor() {
+            document.querySelectorAll(".luz").forEach(function(luz) {
+                luz.style.backgroundColor = "#777";
+            });
+            var corAtual = cores[contador];
+            document.getElementById(corAtual).style.backgroundColor = corAtual;
+            contador = (contador + 1) % 3;
+        }
+
+        setInterval(mudarCor, 2000);
+    </script>
+</head>
+<body>
+    <h1>Atividade 43 - Simulador de Semáforo</h1>
+    <div id="semáforo">
+        <div id="vermelho" class="luz vermelho"></div>
+        <div id="amarelo" class="luz amarelo"></div>
+        <div id="verde" class="luz verde"></div>
+    </div>
+</body>
+</html>
+    

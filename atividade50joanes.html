@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Luz</title>
+    <script>
+        function alternarLuz() {
+            var img = document.getElementById("lampada");
+            img.src = (img.src.indexOf("acesa") != -1) ? "https://via.placeholder.com/150?text=Apagada" : "https://via.placeholder.com/150?text=Acesa";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 50 - Simulador de Luz</h1>
+    <img id="lampada" src="https://via.placeholder.com/150?text=Acesa" alt="Lâmpada" onclick="alternarLuz()">
+</body>
+</html>

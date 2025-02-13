@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação Simples</title>
+    <script>
+        var posicao = 0;
+        function moverQuadrado() {
+            posicao += 5;
+            if (posicao > window.innerWidth) posicao = 0;
+            document.getElementById("quadrado").style.left = posicao + "px";
+        }
+
+        setInterval(moverQuadrado, 20);
+    </script>
+</head>
+<body>
+    <h1>Atividade 20 - Animação Simples</h1>
+    <div id="quadrado" style="position: absolute; width: 50px; height: 50px; background-color: red;"></div>
+</body>
+</html>

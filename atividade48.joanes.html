@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Tema Aleatório</title>
+    <script>
+        function mudarTema() {
+            var cores = ["#f0f8ff", "#ffebcd", "#ffe4e1", "#f5fffa", "#f0fff0"];
+            var fontes = ["Arial", "Verdana", "Times New Roman", "Georgia", "Courier New"];
+            var corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            var fonteAleatoria = fontes[Math.floor(Math.random() * fontes.length)];
+
+            document.body.style.backgroundColor = corAleatoria;
+            document.body.style.fontFamily = fonteAleatoria;
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 48 - Mudar Tema Aleatório</h1>
+    <button onclick="mudarTema()">Mudar Tema</button>
+</body>
+</html>

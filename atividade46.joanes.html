@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar e Mostrar</title>
+    <script>
+        function alternarVisibilidade() {
+            var img = document.getElementById("imagem");
+            img.style.display = (img.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 46 - Ocultar e Mostrar</h1>
+    <button onclick="alternarVisibilidade()">Alternar Imagem</button>
+    <img id="imagem" src="https://via.placeholder.com/150" alt="Imagem Exemplo">
+</body>
+</html>

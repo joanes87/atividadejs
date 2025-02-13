@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Fugitivo</title>
+    <script>
+        function fugir() {
+            var x = Math.random() * window.innerWidth;
+            var y = Math.random() * window.innerHeight;
+            document.getElementById("botaoFugitivo").style.position = "absolute";
+            document.getElementById("botaoFugitivo").style.left = x + "px";
+            document.getElementById("botaoFugitivo").style.top = y + "px";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 11 - Botão Fugitivo</h1>
+    <button id="botaoFugitivo" onclick="fugir()">Clique em mim!</button>
+</body>
+</html>

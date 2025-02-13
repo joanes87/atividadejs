@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Clique</title>
+    <script>
+        var tamanho = 100;
+        function diminuir() {
+            if (tamanho > 0) {
+                tamanho -= 10;
+                document.getElementById("quadrado").style.width = tamanho + "px";
+                document.getElementById("quadrado").style.height = tamanho + "px";
+            } else {
+                alert("O quadrado desapareceu!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 13 - Desafio do Clique</h1>
+    <div id="quadrado" onclick="diminuir()" style="width: 100px; height: 100px; background-color: red;"></div>
+</body>
+</html>

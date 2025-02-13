@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <script>
+        function adicionarTarefa() {
+            var tarefa = document.getElementById("tarefa").value;
+            var li = document.createElement("li");
+            li.textContent = tarefa;
+            document.getElementById("lista").appendChild(li);
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 36 - Lista de Tarefas</h1>
+    <input type="text" id="tarefa" placeholder="Nova tarefa">
+    <button onclick="adicionarTarefa()">Adicionar</button>
+    <ul id="lista"></ul>
+</body>
+</html>

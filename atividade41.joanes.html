@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <script>
+        var tempo = 0;
+        var intervalo;
+        
+        function iniciar() {
+            intervalo = setInterval(function() {
+                tempo++;
+                document.getElementById("cronometro").innerText = tempo;
+            }, 1000);
+        }
+
+        function pausar() {
+            clearInterval(intervalo);
+        }
+
+        function zerar() {
+            clearInterval(intervalo);
+            tempo = 0;
+            document.getElementById("cronometro").innerText = tempo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 41 - Cronômetro</h1>
+    <p id="cronometro">0</p>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="pausar()">Pausar</button>
+    <button onclick="zerar()">Zerar</button>
+</body>
+</html>

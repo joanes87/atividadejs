@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <script>
+        function adicionarItem() {
+            var item = document.getElementById("item").value;
+            var li = document.createElement("li");
+            li.textContent = item;
+            document.getElementById("listaCompras").appendChild(li);
+            document.getElementById("item").value = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Atividade 40 - Lista de Compras</h1>
+    <input type="text" id="item" placeholder="Adicionar item">
+    <button onclick="adicionarItem()">Adicionar</button>
+    <ul id="listaCompras"></ul>
+</body>
+</html>
